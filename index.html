@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Task Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="task.js" async></script>
+    <style>
+        body {
+            display:flex;
+            flex-direction:row
+        }
+        #formfields{
+            width: 100%;
+            clear: both;
+        }
+        #display{
+                flex-grow:1;
+                float: right;
+                margin: 0%;
+                padding: 0%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="myForm" style="width: 500px; padding-left: 300px">
+        <fieldset id ="formfileds">
+            <legend>Task Tracker v2.0</legend>
+                <div id="display"></div>
+
+            Task Name: 
+            <input type="text" id='taskName'> <br/>
+
+            Date:
+            <input type="date" id='date'> <br/>
+            AssignedTo :
+            <input type="text" id='assignedTo'><br/>
+            <button type="button" onclick="Validate()">Add Task </button>
+        </fieldset>
+        <button onclick="displayTable()"> Read Data</button>
+    </form>
+    
+
+    
+
+
+
+
+
+
+</body>
+
+</html>
