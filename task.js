@@ -30,21 +30,21 @@ function Validate() {
   if (localStorage.getItem("taskList")) {
      taskArray = JSON.parse(localStorage.getItem("taskList"));
   } 
-  
+
   let task = {};
-    task["taskName"] = document.getElementById("taskName").value;
-    task["date"] = document.getElementById("date").value.toLocaleDateString();
-    task["assignedTo"] = document.getElementById("assignedTo").value;
-    taskArray.unshift(task);
-    localStorage.setItem("taskList", JSON.stringify(taskArray));
-    displayTable();
-    document.getElementById("myForm").reset();
+  task["taskName"] = document.getElementById("taskName").value;
+  task["date"] = document.getElementById("date").value;
+  task["assignedTo"] = document.getElementById("assignedTo").value;
+  taskArray.unshift(task);
+  localStorage.setItem("taskList", JSON.stringify(taskArray));
+  displayTable();
+  document.getElementById("myForm").reset();
 }
 
 function displayTable() {
   let retrievedObject = localStorage.getItem("taskList");
   let parsedObject = JSON.parse(retrievedObject);
-  let html = "<table id='dataTable' border='0'>";
+  let html = "<table id='dataTable' border='0'> <th> Existing Tasks </th>";
   for (let i in parsedObject) {
     html += "<tr id='parsedObject1[i]'>";
     html += "<td>" + parsedObject[i].taskName + "</td>";

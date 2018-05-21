@@ -11,34 +11,27 @@ and open the template in the editor.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="task.js" async></script>
-    <style>
-       form { margin: 0 auto; width:250px; }
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <form id="myForm"  onsubmit="Validate()">
-        <fieldset id ="formfileds">
-            <legend>Task Tracker v2.0</legend>
-            Task Name: 
-            <input type="text" id='taskName' required> <br/>
-
-            Date:
-            <input type="date" id='date' required> <br/>
-            AssignedTo :
-            <input type="text" id='assignedTo' required><br/>
-        </fieldset>
-        <input type="submit">
-    </form>
-    <div id="display"></div>
-
-    
-
-
-
-
-
+    <div class="container" style="border: 1px solid grey">
+        <header>
+            <h2>Task Tracker v2.0</h1></header>
+        <aside class="formfields">
+            <form id="myForm"  onsubmit="Validate()">
+                <h1> Create a Task</h1>
+                <label> Task Name:</label>  
+                <input type="text" id='taskName' required> <br/>
+                <label>Date:</label> <br/>
+                <input type="date" id='date' required> <br/> 
+                <label> AssignedTo:</label>
+                <input type="text" id='assignedTo' required><br/>
+                <input type="submit">    
+            </form> 
+        </aside>
+        <article id="display"></article>
+    </div>
 
 </body>
 
