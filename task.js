@@ -33,27 +33,22 @@ function Validate() {
   
   let task = {};
     task["taskName"] = document.getElementById("taskName").value;
-    task["date"] = document.getElementById("date").value;
+    task["date"] = document.getElementById("date").value.toLocaleDateString();
     task["assignedTo"] = document.getElementById("assignedTo").value;
-    taskArray.push(task);
+    taskArray.unshift(task);
     localStorage.setItem("taskList", JSON.stringify(taskArray));
     displayTable();
     document.getElementById("myForm").reset();
-  }
+}
 
 function displayTable() {
   let retrievedObject = localStorage.getItem("taskList");
   let parsedObject = JSON.parse(retrievedObject);
-  let html = "<table id='dataTable' border='1|1'>";
-  html += "<tr>";
-  for (let key in parsedObject[0]) {
-    html += "<th>" + key + "</th>";
-  }
-  html += "</tr>";
+  let html = "<table id='dataTable' border='0'>";
   for (let i in parsedObject) {
     html += "<tr id='parsedObject1[i]'>";
     html += "<td>" + parsedObject[i].taskName + "</td>";
-    html += "<td>" + parsedObject[i].date + "</td>";
+    html += "<td>" + parsedObject[i].date+ "</td>";
     html += "<td>" + parsedObject[i].assignedTo + "</td>";
     html += "</tr>";
   }

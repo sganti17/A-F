@@ -12,42 +12,26 @@ and open the template in the editor.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="task.js" async></script>
     <style>
-        body {
-            display:flex;
-            flex-direction:row
-        }
-        #formfields{
-            width: 100%;
-            clear: both;
-        }
-        #display{
-                flex-grow:1;
-                float: right;
-                margin: 0%;
-                padding: 0%;
-        }
+       form { margin: 0 auto; width:250px; }
     </style>
 
 </head>
 
 <body>
-    <form id="myForm" style="width: 500px; padding-left: 300px">
+    <form id="myForm"  onsubmit="Validate()">
         <fieldset id ="formfileds">
             <legend>Task Tracker v2.0</legend>
-                <div id="display"></div>
-
             Task Name: 
-            <input type="text" id='taskName'> <br/>
+            <input type="text" id='taskName' required> <br/>
 
             Date:
-            <input type="date" id='date'> <br/>
+            <input type="date" id='date' required> <br/>
             AssignedTo :
-            <input type="text" id='assignedTo'><br/>
-            <button type="button" onclick="Validate()">Add Task </button>
+            <input type="text" id='assignedTo' required><br/>
         </fieldset>
-        <button onclick="displayTable()"> Read Data</button>
+        <input type="submit">
     </form>
-    
+    <div id="display"></div>
 
     
 
