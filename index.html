@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
 
 <head>
-    <title>Task Tracker</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="task.js" async></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="task.js"></script>
+
 </head>
 
 <body>
-    <div class="container" style="border: 1px solid grey">
-        <header>
-            <h2>Task Tracker v2.0</h1></header>
-        <aside class="formfields">
-            <form id="myForm"  onsubmit="Validate()">
-                <h1> Create a Task</h1>
-                <label> Task Name:</label>  
-                <input type="text" id='taskName' required> <br/>
-                <label>Date:</label> <br/>
-                <input type="date" id='date' required> <br/> 
-                <label> AssignedTo:</label>
-                <input type="text" id='assignedTo' required><br/>
-                <input type="submit">    
-            </form> 
-        </aside>
-        <article id="display"></article>
+    <div class="container" id="c1">
+        <br/>
+        <h1>Task Tracker</h1>
+        <h5>&nbsp;v2.0</h5>
+        <br/>
+    </div>
+    <div class="container" id="c2">
+
+        <div class="row">
+            <div class="col-sm-6">
+
+                <form id="myForm" class="formfields" onsubmit="Validate()">
+                    <br/>
+                    <h3 class="head">Create a Task</h3>
+                    <br/>
+                    <label> Task Name:
+                        <input type="text" class="form-control" id="taskName" required="" />
+                    </label>
+                    <br />
+                    <label>Date:
+                        <br />
+                        <input type="date" class="form-control" id="date" required="" />
+                    </label>
+                    <br />
+                    <label> AssignedTo:
+                        <input type="text" class="form-control" id="assignedTo" required="" />
+                    </label>
+                    <br />
+                    <br/>
+                    <button type="submit" class="btn" id ="btn1">Submit</button>
+                </form>
+            </div>
+            <div class="col-sm-6" id="c3" >
+                <br/>
+                <h3 class="head">Existing Tasks</h3>
+                <br/>
+                <div>
+                    <div id="display"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </body>
+
 
 </html>

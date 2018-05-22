@@ -1,73 +1,83 @@
 
-header {
-    padding: 2em;
-    display: flex;
-    color: black;
-    background-color:lightgrey;
-    clear: left;
-    text-align: left;
-    font-size: 125%;
-
+/* Styles go here */
+body{
+    font-family: 'Times New Roman', Times, serif;  
 }
-aside{
-    background-color: white;
-    color:black;
-    float: left;
-    max-width: 250px;
-    margin: 0;
-    padding: 1em;
-}
-article {
-    margin-left: 170px;
-    border-left: 1px solid grey;
-    padding: 1em;
-    overflow: hidden;
+.head{
+    font-weight: bolder;
 }
 input[type="text"]{
-    background-color: lightgrey;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    display: inline-block;
-    width: 100%;
-    padding: 2px 2px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    width: 400px;
+    background-color: #F5F5F5;
+    
+    
+  }
+   input[type="date"]{
+    width: 400px;
+     background-color: #F5F5F5;
+    
+  }
+#myForm{
+  margin-left: 50px;
+  overflow-x:auto;
+  font-weight: bold;
 }
-input[type="date"]{
-    background-color: lightgrey;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 2px 2px;
-    margin: 8px 0;
+#dataTable{
+  overflow-x:auto;
+  border: 4px solid #F5F5F5; 
+  border-radius: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  
 }
-input[type=submit] {
+
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+color: black !important;
+}
+#c1{
+    background-color:#F5F5F5;
+    border-top: 10px solid lightgrey;
+    border-left: 10px solid lightgrey;
+    border-right: 10px solid lightgrey;
+}
+
+#c2{
+    border-bottom: 50px solid #F5F5F5;
+    border-left: 10px solid #F5F5F5;
+    border-right: 10px solid #F5F5F5;
+}
+
+#c3{
+border-left: 10px solid #F5F5F5;
+}
+
+#btn1{
     background-color: black;
     color: white;
-    padding: 3px 8px;
-    border: none;
-    margin: auto;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-table { 
-    border-collapse: collapse;
-}
-
-td, th {
-    text-align: left;
-    padding: 8px;
-}
 tr td:first-child {
     font-weight: bold;
+    padding-right: 0%;
+    margin-right: 0%;
+    border: 0ch;
 }
 tr td:last-child {
     font-weight: bold;
+    padding-left: 2%;
+    margin-right: 0%;
+    border: 0ch;
+}
+td:nth-child(even){
+    padding-right:200px;
+    padding-left: 0ch;
+    column-gap: 0ch;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
