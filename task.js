@@ -1,16 +1,16 @@
 const data =
-  [
-    { "taskName": "Test Task #1", "date": "12/01/2012", "assignedTo": "John Doe" },
-    { "taskName": "Test Task #2", "date": "12/02/2012", "assignedTo": "John Doe" },
-    { "taskName": "Test Task #3", "date": "12/03/2012", "assignedTo": "John Doe" },
-    { "taskName": "Test Task #4", "date": "12/04/2012", "assignedTo": "John Doe" },
-    { "taskName": "Test Task #5", "date": "12/05/2012", "assignedTo": "John Doe" },
-    { "taskName": "Test Task #6", "date": "12/06/2012", "assignedTo": "John Doe" },
-    { "taskName": "Test Task #7", "date": "12/07/2012", "assignedTo": "John Doe" }
-  ]
+[
+{"taskName": "Test Task #1", "date": "12/01/2012", "assignedTo": "John Doe" },
+{"taskName": "Test Task #2", "date": "12/02/2012", "assignedTo": "John Doe" },
+{"taskName": "Test Task #3", "date": "12/03/2012", "assignedTo": "John Doe" },
+{"taskName": "Test Task #4", "date": "12/04/2012", "assignedTo": "John Doe" },
+{"taskName": "Test Task #5", "date": "12/05/2012", "assignedTo": "John Doe" },
+{"taskName": "Test Task #6", "date": "12/06/2012", "assignedTo": "John Doe" },
+{"taskName": "Test Task #7", "date": "12/07/2012", "assignedTo": "John Doe" }
+]
 
-window.onload = function () {
-  if (!localStorage.getItem("taskList")) {
+window.onload = function() {
+  if(!localStorage.getItem("taskList")){
     (localStorage.setItem("taskList", JSON.stringify(data)));
     displayTable();
   }
@@ -21,8 +21,8 @@ function Validate() {
   // initialize taskrray from localstorage
   let taskArray = []
   if (localStorage.getItem("taskList")) {
-    taskArray = JSON.parse(localStorage.getItem("taskList"));
-  }
+     taskArray = JSON.parse(localStorage.getItem("taskList"));
+  } 
 
   let task = {};
   task["taskName"] = document.getElementById("taskName").value;
@@ -37,11 +37,11 @@ function Validate() {
 function displayTable() {
   let retrievedObject = localStorage.getItem("taskList");
   let parsedObject = JSON.parse(retrievedObject);
-  let html = "<table class='table' id='dataTable' border='0'> ";
+  let html = "<table class='table' id='dataTable'> ";
   for (let i in parsedObject) {
     html += "<tr id='parsedObject1[i]'>";
     html += "<td>" + parsedObject[i].taskName + "</td>";
-    html += "<td>" + parsedObject[i].date + "</td>";
+    html += "<td>" + parsedObject[i].date+ "</td>";
     html += "<td>" + parsedObject[i].assignedTo + "</td>";
     html += "</tr>";
   }

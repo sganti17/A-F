@@ -1,61 +1,51 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-    />
-    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="task.js"></script>
+  <head>
+    <title>A & F KATA !!</title>
+  </head>
 
-</head>
-
-<body>
-    <div class="container" id="c1">
-        <br/>
-        <h1>Task Tracker</h1>
-        <h5>&nbsp;v2.0</h5>
-        <br/>
+  <body>
+    <div class="container" id="container1">
+      <br/><h1>Task Tracker</h1>
+           <h5>&nbsp;v2.0</h5><br/>
     </div>
-    <div class="container" id="c2">
-
-        <div class="row">
-            <div class="col-sm-6">
-
+     <div class="container" id="container2">
+      
+      <div class="row">
+          <div class="col-sm-6">
+               
                 <form id="myForm" class="formfields" onsubmit="Validate()">
-                    <br/>
-                    <h3 class="head">Create a Task</h3>
-                    <br/>
-                    <label> Task Name:
-                        <input type="text" class="form-control" id="taskName" required="" />
-                    </label>
-                    <br />
-                    <label>Date:
-                        <br />
-                        <input type="date" class="form-control" id="date" required="" />
-                    </label>
-                    <br />
-                    <label> AssignedTo:
-                        <input type="text" class="form-control" id="assignedTo" required="" />
-                    </label>
-                    <br />
-                    <br/>
-                    <button type="submit" class="btn" id ="btn1">Submit</button>
-                </form>
-            </div>
-            <div class="col-sm-6" id="c3" >
-                <br/>
-                <h3 class="head">Existing Tasks</h3>
-                <br/>
-                <div>
-                    <div id="display"></div>
-                </div>
-            </div>
+                   <br/><h4>Create a Task</h4><br/>
+                   
+                  <label> Task Name
+                    <input type="text" class="form-control" id="taskName" required="" />
+                  </label>
+                  
+                  <label>Date
+                    <input type="date" class="form-control" id="date" required="" />
+                  </label>
+                  
+                  <label> Assigned To
+                    <input type="text"  class="form-control" id="assignedTo" required=""/>
+                  </label><br/>
+                  
+                  <button type="submit" class="btn" id="btn1">Submit</button>
+              </form>
+          </div>
+          <div class="col-sm-6" id="container3">
+                 <br/><h3>Existing Tasks</h3><br/>
+                  <p id="display"></p><br/>
+          </div>
+     
         </div>
-
-    </div>
-
-</body>
-
+      </div>
+    
+     <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </body>
+  
 
 </html>
